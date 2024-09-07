@@ -25,7 +25,8 @@ def crear_cotizacion():
         ventanas.append(ventana)
     
     cotizacion = Cotizacion(cliente, ventanas)
-    total = cotizacion.aplicar_descuento()
+    total = cotizacion.calcular_total()
+    
     print(f"Nombre: {nombre_cliente}")
     print(f"Empresa: {empresa_cliente}")
     print(f"El costo total de la cotización es: ${total:.0f}")
@@ -44,4 +45,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
